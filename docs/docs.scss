@@ -1,0 +1,12 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "../src/css/honeycomb";
+@import "_sass/syntax";
+
+// Hide the first child li because it's always going to be "Contents".
+#markdown-toc > li:first-child {
+  display: none;
+}

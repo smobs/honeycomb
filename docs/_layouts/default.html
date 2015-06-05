@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
+
+    <!-- Meta -->
+    <meta name="author" content="Red Gate Software Ltd">
+    <meta name="copyright" content="All material (c) Red Gate Software Ltd or its original authors unless otherwise stated">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/docs.css">
+
+    <!-- Modernizr -->
+    <script src="/src/js/vendor/modernizr.min.js"></script>
+
+    <title>{{ page.title }} - Honeycomb</title>
+    <meta name="description" content="Front-end Web Development and Design Guidelines for redgate.com.">
+</head>
+
+<body id="top-of-page">
+	<div class="page-wrapper">
+
+        <header class="band scheme--red">
+            <div class="band__inner-container band__inner-container--tight">
+                <h1 class="float-left spaced-bottom--none"><a href="/">Honeycomb</a></h1>
+                <nav class="nav-bar nav-bar--right">
+                    <ul class="nav-bar">
+                        <li><a href="#">Install Honeycomb</a></li>
+                        <li><a href="#">Build with Honeycomb</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+		<div class="band">
+		    <div class="band__inner-container band__inner-container--tight grid">
+
+                <div class="grid__col grid__col--span-1-of-4 padded-right">
+                    {% include sidenav.html %}
+                </div>
+
+                <div class="grid__col grid__col--span-3-of-4 padded-left">
+                	<h1>{{ page.title }}</h1>
+                    {{ content }}
+                </div>
+
+           </div>
+		</div>
+
+        <footer class="band scheme--darkest-grey">
+            <div class="band__inner-container band__inner-container--tight">
+                <h1 class="zeta">Honeycomb</h1>
+            </div>
+        </footer>
+
+	</div><!-- END .page-wrapper -->
+
+    <!-- JavaScripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/dist/js/honeycomb.min.js"></script>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="/docs/includes/docs.js"></script>
+</body>
+</html>

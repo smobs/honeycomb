@@ -1,0 +1,33 @@
+<nav class="spaced-bottom">
+    <ul class="list--ui">
+        <li><a href="/working-practices/" {% if page.section == "working-practices" %}class="active"{% endif %}>Working practices</a></li>
+        <li><a href="/design/" {% if page.section == "design-guidelines" %}class="active"{% endif %}>Design guidelines</a></li>
+        <li><a href="/js-library/" {% if page.section == "js-library" %}class="active"{% endif %}>JavaScript library</a></li>
+        <li><a href="/oocss-framework/" {% if page.section == "oocss-framework" %}class="active"{% endif %}>OOCSS framework</a></li>
+        <li><a href="/html-patterns/" {% if page.section == "html-patterns" %}class="active"{% endif %}>HTML patterns</a></li>
+    </ul>
+</nav>
+
+{% if page.section == "working-practices" %}
+<nav>
+    <ul class="list--ui">
+        <li><a href="/working-practices/" {% if page.title == "Working practices" %}class="active"{% endif %}>Introduction</a></li>
+        <li><a href="/working-practices/scaffolding" {% if page.title == "Scaffolding" %}class="active"{% endif %}>Project scaffolding</a></li>
+        <li><a href="/working-practices/html" {% if page.title == "HTML" %}class="active"{% endif %}>HTML</a></li>
+        <li><a href="/working-practices/css" {% if page.title == "CSS" %}class="active"{% endif %}>CSS</a></li>
+        <li><a href="/working-practices/javascript" {% if page.title == "JavaScript" %}class="active"{% endif %}>JavaScript</a></li>
+        <li><a href="/working-practices/performance" {% if page.title == "Performance" %}class="active"{% endif %}>Performance</a></li>
+        <li><a href="/working-practices/browser-support" {% if page.title == "Browser support" %}class="active"{% endif %}>Browser and device support</a></li>
+        <li><a href="/working-practices/mobile" {% if page.title == "Mobile" %}class="active"{% endif %}>Mobile (review)</a></li>
+        <li><a href="/working-practices/accessibility" {% if page.title == "Accessibility" %}class="active"{% endif %}>Accessibility</a></li>
+        <li><a href="/working-practices/">Image optimisation (to do)</a></li>
+        <li><a href="/working-practices/">Front-end QA checklist (to do)</a></li>
+        <li><a href="/working-practices/">Search engine optimisation (to do)</a></li>
+        <li><a href="/working-practices/">Copywriting & proofing (to do)</a></li>
+        <li><a href="/working-practices/">Version control (to do)</a></li>
+        <li><a href="/working-practices/">Link policy (to do)</a></li>
+        <li><a href="/working-practices/">Re-directs and no-index (to do)</a></li>
+        <li><a href="/working-practices/">Website updates / sandboxing work (to do)</a></li>
+    </ul>
+</nav>
+{% endif %}

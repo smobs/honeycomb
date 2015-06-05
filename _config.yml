@@ -1,0 +1,17 @@
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+source: docs
+baseurl: ""
+
+sass:
+  sass_dir: ../
+  style: compressed
+
+github:
+  repo: https://github.com/redgate/honeycomb
