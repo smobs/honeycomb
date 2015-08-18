@@ -1,9 +1,93 @@
+/* PRIMARY NAVIGATION */
 .header--primary {
+    display: table;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    position: relative;
+    z-index: 10;
+
+    .band__inner-container {
+        display: table;
+        @include padding(0);
+    }
+
+    .header--primary__app-logo-container {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        img {
+            @include margin(0.5, left);
+            @include margin(0.5, right);
+        }
+    }
+
+    .header--primary__company-logo-container {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        border-right: none !important;
+    }
+
     ul {
         @extend %list--horizontal;
+        @include margin(1, left);
+        @include margin(1, right);
+        float: left;
+
+        &, li {
+            @include margin(0, bottom);
+        }
 
         a {
-            
+            @extend .display--inline;
+            @include padding(1, top);
+            @include padding(1, bottom);
+            @include padding(0.5, left);
+            @include padding(0.5, right);
+
+            border-bottom-width: 0;
+
+            &.active {
+                border-bottom-width: 5px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include margin(2, bottom);
+
+}
+
+.header--primary--light {
+    background-color: color('grey', 1);
+    border-bottom: 1px solid color('grey', 3);
+
+    .header--primary__app-logo-container {
+        border-right: 1px solid color('grey', 3);
+    }
+
+    .header--primary__company-logo-container {
+        background-color: color('grey', 3);
+    }
+}
+
+.header--primary--dark {
+    background-color: color('grey', 6);
+
+    .header--primary__app-logo-container {
+        background-color: color('red', 'brand');
+    }
+
+    .header--primary__company-logo-container {
+        background-color: color('grey', 5);
+    }
+
+    ul {
+        a {
+            color: color('white');
         }
     }
 }
+
+/* SECONDARY NAVIGATION */
