@@ -1,6 +1,7 @@
 /* PRIMARY NAVIGATION */
 .header--primary {
     display: table;
+    width: 100%;
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
     position: relative;
@@ -8,6 +9,7 @@
 
     .band__inner-container {
         display: table;
+        // width: 100%;
         @include padding(0);
     }
 
@@ -16,10 +18,11 @@
         vertical-align: middle;
         text-align: center;
 
-        img {
-            @include margin(0.5, left);
-            @include margin(0.5, right);
-        }
+        width: 1px;
+        white-space: nowrap;
+
+        @include padding(1, left);
+        @include padding(1, right);
     }
 
     .header--primary__company-logo-container {
@@ -27,6 +30,12 @@
         vertical-align: middle;
         text-align: center;
         border-right: none !important;
+
+        width: 1px;
+        white-space: nowrap;
+
+        @include padding(1, left);
+        @include padding(1, right);
     }
 
     ul {
