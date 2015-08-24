@@ -2,40 +2,28 @@
 .header--primary {
     display: table;
     width: 100%;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
     position: relative;
     z-index: 10;
 
     .band__inner-container {
-        display: table;
-        // width: 100%;
         @include padding(0);
+        display: table;
     }
 
     .header--primary__app-logo-container {
+        @include padding(1, left);
+        @include padding(1, right);
         display: table-cell;
         vertical-align: middle;
         text-align: center;
-
         width: 1px;
         white-space: nowrap;
-
-        @include padding(1, left);
-        @include padding(1, right);
     }
 
     .header--primary__company-logo-container {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+        @extend .header--primary__app-logo-container;
         border-right: none !important;
-
-        width: 1px;
-        white-space: nowrap;
-
-        @include padding(1, left);
-        @include padding(1, right);
     }
 
     ul {
@@ -54,7 +42,6 @@
             @include padding(1, bottom);
             @include padding(0.5, left);
             @include padding(0.5, right);
-
             border-bottom-width: 0;
 
             &.active {
@@ -63,9 +50,6 @@
             }
         }
     }
-
-    @include margin(2, bottom);
-
 }
 
 .header--primary--light {
@@ -100,3 +84,38 @@
 }
 
 /* SECONDARY NAVIGATION */
+.header--secondary {
+    border-bottom: 4px solid color('grey', 2);
+    overflow: visible;
+
+    .band__inner-container {
+        @include padding(0);
+        position: relative;
+    }
+
+    ul {
+        @extend %list--horizontal;
+        position: relative;
+        top: 4px;
+
+        &, li {
+            @include margin(0, bottom);
+        }
+
+        a {
+            @extend .display--inline;
+            @include padding(1);
+            @include padding(0.5, top);
+            @include padding(0.5, bottom);
+            @include font-size(13px);
+            border-bottom-color: transparent;
+            border-bottom-width: 4px;
+            text-transform: uppercase;
+
+            &.active {
+                border-bottom-color: $link-border-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
