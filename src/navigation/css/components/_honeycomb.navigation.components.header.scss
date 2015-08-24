@@ -9,6 +9,11 @@
     .band__inner-container {
         @include padding(0);
         display: table;
+        // width: 100%; /* Remove this when responsive */
+
+        &:before, &:after {
+            display: none;
+        }
     }
 
     .header--primary__app-logo-container {
@@ -37,7 +42,8 @@
         }
 
         a {
-            @extend .display--inline;
+            // @extend .display--inline;
+            display: block;
             @include padding(1, top);
             @include padding(1, bottom);
             @include padding(0.5, left);
@@ -47,6 +53,40 @@
             &.active {
                 border-bottom-width: 5px;
                 font-weight: bold;
+            }
+        }
+    }
+
+    @include responsive('medium') {
+        &, .band__inner-container {
+            display: block;
+        }
+
+        .header--primary__app-logo-container,
+        .header--primary__company-logo-container {
+            display: block;
+            width: 100%;
+            text-align: left;
+            @include padding(0.5, top);
+            @include padding(0.5, bottom);
+        }
+
+        .header--primary__company-logo-container {
+            display: none;
+        }
+
+        ul {
+            float: none !important;
+            @include margin(0);
+            li {
+                display: block;
+            }
+
+            a {
+                @include padding(0.5, top);
+                @include padding(0.5, bottom);
+                @include padding(1, left);
+                @include padding(1, right);
             }
         }
     }
@@ -62,6 +102,16 @@
 
     .header--primary__company-logo-container {
         background-color: color('grey', 3);
+    }
+
+    @include responsive('medium') {
+        .header--primary__app-logo-container {
+            border-bottom: 4px solid color('grey', 3);
+        }
+
+        li {
+            border-bottom: 1px solid color('grey', 3);
+        }
     }
 }
 
@@ -81,6 +131,16 @@
             color: color('white');
         }
     }
+
+    @include responsive('medium') {
+        .header--primary__app-logo-container {
+            // border-bottom: 4px solid color('grey', 5);
+        }
+
+        li {
+            border-bottom: 1px solid color('grey', 5);
+        }
+    }
 }
 
 /* SECONDARY NAVIGATION */
@@ -95,26 +155,37 @@
 
     ul {
         @extend %list--horizontal;
-        position: relative;
-        top: 4px;
 
         &, li {
             @include margin(0, bottom);
         }
 
         a {
-            @extend .display--inline;
             @include padding(1);
             @include padding(0.5, top);
             @include padding(0.5, bottom);
             @include font-size(13px);
+            display: block;
             border-bottom-color: transparent;
             border-bottom-width: 4px;
             text-transform: uppercase;
+            position: relative;
+            top: 4px;
 
             &.active {
                 border-bottom-color: $link-border-color;
                 font-weight: bold;
+            }
+        }
+    }
+
+    @include responsive('medium') {
+        border-bottom: none;
+
+        ul {
+            li {
+                display: block;
+                border-bottom: 4px solid color('grey', 2);
             }
         }
     }
